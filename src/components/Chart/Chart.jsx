@@ -15,8 +15,6 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
         fetchAPI();
     }, []);
 
-    console.log(confirmed, recovered, deaths)
-
     // If data has not been rendered, return null. 
     const lineChart = (
         dailyData.length
@@ -29,8 +27,9 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
                 label: 'Infected',
                 borderColor: '#3333ff',
                 fill: false,
-            }, {data:dailyData.map(({deaths}) => deaths),
-            label: 'Deaths',
+            }, 
+            {data:dailyData.map(({deaths}) => deaths),
+            label: "Deaths",
             borderColor: 'red',
             backgroundColor: 'rgba(255, 0, 0, 0.5)',
             fill: false,}] 
@@ -41,15 +40,18 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
         />) : null
     );
 
+
+
+
     const barChart = (
         confirmed 
         ? 
         (
             <Bar  
             data={{
-                labels: ['Infected', 'Active', 'Recovered', 'Deaths'],
+                labels: ['Infected', `Active (${(((confirmed.value - recovered.value - deaths.value)/confirmed.value)*100).toFixed(2)}%)`, `Recovered (${((recovered.value/confirmed.value)*100).toFixed(2)}%)`, `Deaths (${((deaths.value/confirmed.value)*100).toFixed(2)}%)`],
                 datasets: [{
-                    label: 'People',
+                    label: `People`,
                     backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(0, 0, 255, 0.5)", "rgba(0, 255, 0, 0.5)", "rgba(0, 0, 0, 0.5)"],
                     data: [confirmed.value, confirmed.value-recovered.value-deaths.value ,recovered.value, deaths.value]
                 }]

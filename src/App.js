@@ -4,6 +4,7 @@ import {Cards, Chart, CountryPicker} from './components';
 import styles from './App.module.css'
 import { fetchData } from './api'
 import coronaimage from './images/image.png'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Better to use class rather than hooks when dealing with asynchronous data. 
 class App extends React.Component {
