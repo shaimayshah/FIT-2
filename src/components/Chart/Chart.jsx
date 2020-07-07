@@ -35,7 +35,20 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
             fill: false,}] 
         }}
         options={{
-            title:{display: true, text:'Global COVID Cases and Deaths'}
+            title:{display: true, text:'Global COVID Cases and Deaths'},
+            maintainAspectRatio: false,
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display:false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display:false
+                    }   
+                }]
+            }
         }}
         />) : null
     );
@@ -59,6 +72,19 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
             options = {{
                 legend: {display: false},
                 title: {display: true, text:`Current state in ${country}`},
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display:false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display:false
+                        }   
+                    }]
+                }
             }}
             />
         ) : null
