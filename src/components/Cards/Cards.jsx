@@ -26,6 +26,22 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                             />
                         </Typography>
                         <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography variant="body2">Number of total cases of COVID-19</Typography>
+                    </CardContent>
+                </Grid>
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.active)}>
+                    <CardContent>
+                        {/* Basically the <p> tag for material UI, gutterbottom provides a bottom margin */}
+                        <Typography color="textSecondary" gutterBottom>Active</Typography>
+                        <Typography variant="h5">
+                            <CountUp
+                                start={0}
+                                end={confirmed.value - recovered.value - deaths.value}
+                                duration={2.5}
+                                separator=","
+                            />
+                        </Typography>
+                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of active cases of COVID-19</Typography>
                     </CardContent>
                 </Grid>

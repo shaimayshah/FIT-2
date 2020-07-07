@@ -28,12 +28,15 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
                 data:dailyData.map(({confirmed}) => confirmed),
                 label: 'Infected',
                 borderColor: '#3333ff',
-                fill: true,
+                fill: false,
             }, {data:dailyData.map(({deaths}) => deaths),
             label: 'Deaths',
             borderColor: 'red',
             backgroundColor: 'rgba(255, 0, 0, 0.5)',
-            fill: true,}] 
+            fill: false,}] 
+        }}
+        options={{
+            title:{display: true, text:'Global COVID Cases and Deaths'}
         }}
         />) : null
     );
@@ -44,11 +47,11 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
         (
             <Bar  
             data={{
-                labels: ['Infected', 'Recovered', 'Deaths'],
+                labels: ['Infected', 'Active', 'Recovered', 'Deaths'],
                 datasets: [{
                     label: 'People',
-                    backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
-                    data: [confirmed.value, recovered.value, deaths.value]
+                    backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(0, 0, 255, 0.5)", "rgba(0, 255, 0, 0.5)", "rgba(0, 0, 0, 0.5)"],
+                    data: [confirmed.value, confirmed.value-recovered.value-deaths.value ,recovered.value, deaths.value]
                 }]
             }}
             options = {{
