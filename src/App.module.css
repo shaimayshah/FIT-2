@@ -9,15 +9,22 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4em;
+    margin-top: 10px;
+    margin-bottom: 3vh;
+}
+
 @media (max-width: 770px) {
     .container{
         margin: 0 10%;
     }
+
+    h1 {
+        font-size: 2em;
+        margin-top: 10px;
+        margin-bottom: 5vh;
+    }
 }
 
-h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2em;
-    margin-top: 10px;
-    margin-bottom: -20px;
-}
