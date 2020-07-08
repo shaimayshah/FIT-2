@@ -19,21 +19,21 @@ export const fetchData = async (country) => {
     }
 }
 
-export const fetchDailyData = async() => {
-    try {
-        const {data} = await axios.get(`${url}/daily`);
+// export const fetchDailyData = async() => {
+//     try {
+//         const {data} = await axios.get(`${url}/daily`);
         
-        const neededData = data.map((dailyData) => ({
-            confirmed: dailyData.confirmed.total,
-            deaths: dailyData.deaths.total, 
-            date: dailyData.reportDate
-        }));
+//         const neededData = data.map((dailyData) => ({
+//             confirmed: dailyData.confirmed.total,
+//             deaths: dailyData.deaths.total, 
+//             date: dailyData.reportDate
+//         }));
 
-        return neededData;
-    } catch (error) {
-        console.log(error);
-    }
-}
+//         return neededData;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 export const fetchCountries = async() =>{
     try{
