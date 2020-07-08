@@ -5,7 +5,7 @@
     {
       "src": "virus.png",
       "type": "image/png",
-      "sizes": "128x128"
+      "sizes": "512x512"
     }
   ],
   "start_url": "",
