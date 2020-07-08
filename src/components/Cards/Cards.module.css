@@ -8,6 +8,7 @@
      /* Need to do it if inline styles are not being used */
     margin: 0 0px !important;
     background-color:rgb(23, 20, 38) !important; 
+    width: 20vw;
 } 
 
 .secondary {

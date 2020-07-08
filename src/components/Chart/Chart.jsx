@@ -64,12 +64,15 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
                 labels: ['Infected', `Active (${(((confirmed.value - recovered.value - deaths.value)/confirmed.value)*100).toFixed(2)}%)`, `Recovered (${((recovered.value/confirmed.value)*100).toFixed(2)}%)`, `Deaths (${((deaths.value/confirmed.value)*100).toFixed(2)}%)`],
                 datasets: [{
                     label: `People`,
-                    backgroundColor: ["rgb(255, 7, 58)", "rgb(45, 176, 246)", "rgb(0,176,72)", "rgb(107, 117, 126)"],
-                    data: [confirmed.value, confirmed.value-recovered.value-deaths.value ,recovered.value, deaths.value]
+                    borderColor: ["rgb(255, 7, 58)", "rgb(45, 176, 246)", "rgb(0,176,72)", "rgb(107, 117, 126)"],
+                    borderWidth: 2,
+                    backgroundColor: ["rgba(255, 7, 58, 0.5)", "rgba(45, 176, 246, 0.5)", "rgba(0,176,72, 0.5)", "rgba(107, 117, 126, 0.5)"],
+                    data: [confirmed.value, confirmed.value-recovered.value-deaths.value, recovered.value, deaths.value]
                 }]
             }}
             options = {{
                 legend: {display: false},
+                responsive: true,
                 title: {display: true, text:`Current state in ${country}`},
                 maintainAspectRatio: false,
                 scales: {
