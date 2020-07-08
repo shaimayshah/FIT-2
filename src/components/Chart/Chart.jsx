@@ -1,60 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import { fetchDailyData} from '../../api';
+import React from 'react';
 import {Bar} from 'react-chartjs-2';
 
 import styles from './Chart.module.css'
 
 const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
-    // const [dailyData, setDailyData] = useState([]);
-
-    // useEffect(()=> {
-    //     const fetchAPI = async() =>{
-    //         setDailyData(await fetchDailyData());
-    //     }
-
-    //     fetchAPI();
-    // }, []);
-
-    // If data has not been rendered, return null. 
-    // const lineChart = (
-    //     dailyData.length
-    //     ? 
-    //     (<Line 
-    //     data = {{
-    //         labels: dailyData.map(({date}) => date), /*returns all of the dates*/
-    //         datasets: [{
-    //             data:dailyData.map(({confirmed}) => confirmed),
-    //             label: 'Infected',
-    //             borderColor: 'rgb(255, 7, 58)',
-    //             fill: false,
-    //         }, 
-    //         {data:dailyData.map(({deaths}) => deaths),
-    //         label: "Deaths",
-    //         borderColor: 'rgb(107, 117, 126)',
-    //         fill: false,}] 
-    //     }}
-    //     options={{
-    //         title:{display: true, text:'Global COVID Cases and Deaths'},
-    //         maintainAspectRatio: false,
-    //         scales: {
-    //             xAxes: [{
-    //                 gridLines: {
-    //                     display:false
-    //                 }
-    //             }],
-    //             yAxes: [{
-    //                 gridLines: {
-    //                     display:false
-    //                 }   
-    //             }]
-    //         }
-    //     }}
-    //     />) : null
-    // );
-
-
-
-
     const barChart = (
         confirmed 
         ? 
@@ -73,7 +22,7 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
             options = {{
                 legend: {display: false},
                 responsive: true,
-                title: {display: true, text:`Current state in ${country}`},
+                title: {display: true, text:`${country} Current State`},
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{

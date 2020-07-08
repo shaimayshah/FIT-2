@@ -2,6 +2,11 @@
     width: 30%;
     margin-bottom: 30px !important;
     /* background-color: red !important; */
+    color:white !important;
+}
+
+.nativeSelect {
+    color:white !important;
 }
 
 @media (max-width:770px) {

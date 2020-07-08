@@ -1,8 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {NativeSelect, FormControl} from '@material-ui/core'
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import styles from './CountryPicker.module.css'
+import { makeStyles } from '@material-ui/core/styles';
+import cx from 'classnames'
 
 import {fetchCountries} from '../../api'
+
+
 
 const CountryPicker = ({handleCountryChange}) => {
     const [fetchedCountries, setFetchedCountries] = useState([]);
@@ -19,8 +25,8 @@ const CountryPicker = ({handleCountryChange}) => {
     
     // console.log(fetchedCountries)
     return(
-        <FormControl variant="outlined" className={styles.formControl}>
-            <NativeSelect variant="outlined" style={{color: "rgb(107, 117, 126)", borderBottom:"1px solid rgb(107, 117, 126)"}} default="" onChange={(e) => {handleCountryChange(e.target.value)}}>
+        <FormControl variant="filled" className={styles.formControl}>
+            <NativeSelect className={styles.nativeSelect} variant="filled" IconComponent={() => (<ExpandMoreIcon color="white"/>)} style={{color: "rgb(107, 117, 126)", borderBottom:"1px solid rgb(107, 117, 126)"}} default="" onChange={(e) => {handleCountryChange(e.target.value)}}>
                 <option value="">Global</option>
                 {fetchedCountries.map((country, i) => <option key = {i} value={country}>{country}</option>)}
             </NativeSelect>
