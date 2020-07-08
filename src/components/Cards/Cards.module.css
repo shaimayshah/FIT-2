@@ -2,11 +2,14 @@
 
 .container {
     margin: 50px 0; 
-}
+
+    
+} 
 
 .card {
-    /* Need to do it if inline styles are not being used*/
+     /* Need to do it if inline styles are not being used */
     margin: 0 0px !important;
+    background-color: rgb(250, 250, 250) !important; 
 } 
 
 .infected {
