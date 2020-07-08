@@ -2,30 +2,36 @@
 
 .container {
     margin: 50px 0; 
-
-    
 } 
 
 .card {
      /* Need to do it if inline styles are not being used */
     margin: 0 0px !important;
-    background-color: rgb(250, 250, 250) !important; 
+    background-color:rgb(23, 20, 38) !important; 
 } 
 
+.secondary {
+    color: rgb(107, 117, 126)
+}
+
 .infected {
-    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+    border-top: 10px solid rgb(255, 7, 58);
+    color: rgb(255, 7, 58) !important;
 }
 
 .active {
-    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+    border-top: 10px solid rgb(45, 176, 246);
+    color: rgb(45, 176, 246) !important;
 }
 
 .recovered {
-    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+    border-top: 10px solid rgb(0,176,72);
+    color: rgb(0,176,72) !important;
 }
 
 .deaths {
-    border-bottom: 10px solid rgba(0, 0, 0, 0.5);
+    border-top: 10px solid rgba(107, 117, 126);
+    color: rgb(107, 117, 126) !important;
 }
 
 @media(max-width: 770px) {

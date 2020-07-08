@@ -18,7 +18,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
                 <CardContent >
                         {/* Basically the <p> tag for material UI, gutterbottom provides a bottom margin */}
-                        <Typography color="textSecondary" gutterBottom>Infected</Typography>
+                        <Typography>Infected</Typography>
                         <Typography variant="h5">
                             <CountUp
                                 start={0}
@@ -27,14 +27,13 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                                 separator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant="body2">Number of total cases</Typography>
+                        <Typography className={styles.secondary} variant="body2">{new Date(lastUpdate).toUTCString()}</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.active)}>
-                    <CardContent>
+                <CardContent >
                         {/* Basically the <p> tag for material UI, gutterbottom provides a bottom margin */}
-                        <Typography color="textSecondary" gutterBottom>Active</Typography>
+                        <Typography>Active</Typography>
                         <Typography variant="h5">
                             <CountUp
                                 start={0}
@@ -43,14 +42,13 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                                 separator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant="body2">Number of active cases</Typography>
+                        <Typography gutterBottom>{(((confirmed.value - recovered.value - deaths.value)/confirmed.value)*100).toFixed(2)}%</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
-                    <CardContent>
+                <CardContent >
                         {/* Basically the <p> tag for material UI, gutterbottom provides a bottom margin */}
-                        <Typography color="textSecondary" gutterBottom>Recovered</Typography>
+                        <Typography>Recovered</Typography>
                         <Typography variant="h5">
                             <CountUp
                                 start={0}
@@ -59,14 +57,13 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                                 separator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant="body2">Number of recoveries</Typography>
+                        <Typography gutterBottom>{(((recovered.value)/confirmed.value)*100).toFixed(2)}%</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
-                    <CardContent>
+                <CardContent >
                         {/* Basically the <p> tag for material UI, gutterbottom provides a bottom margin */}
-                        <Typography color="textSecondary" gutterBottom>Deaths</Typography>
+                        <Typography>Deaths</Typography>
                         <Typography variant="h5">
                             <CountUp
                                 start={0}
@@ -75,8 +72,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                                 separator=","
                             />
                         </Typography>
-                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant="body2">Number of deaths</Typography>
+                        <Typography gutterBottom>{((deaths.value/confirmed.value)*100).toFixed(2)}%</Typography>
                     </CardContent>
                 </Grid>
             </Grid>
