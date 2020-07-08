@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/FIT-2/static/css/main.3a1953c6.chunk.css",
-    "main.js": "/FIT-2/static/js/main.a235ae09.chunk.js",
-    "main.js.map": "/FIT-2/static/js/main.a235ae09.chunk.js.map",
+    "main.css": "/FIT-2/static/css/main.003f71b6.chunk.css",
+    "main.js": "/FIT-2/static/js/main.e50e6544.chunk.js",
+    "main.js.map": "/FIT-2/static/js/main.e50e6544.chunk.js.map",
     "runtime-main.js": "/FIT-2/static/js/runtime-main.0440aedc.js",
     "runtime-main.js.map": "/FIT-2/static/js/runtime-main.0440aedc.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/FIT-2/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.6bec792e.chunk.js": "/FIT-2/static/js/2.6bec792e.chunk.js",
-    "static/js/2.6bec792e.chunk.js.map": "/FIT-2/static/js/2.6bec792e.chunk.js.map",
+    "static/css/2.a98241bf.chunk.css": "/FIT-2/static/css/2.a98241bf.chunk.css",
+    "static/js/2.38f449f7.chunk.js": "/FIT-2/static/js/2.38f449f7.chunk.js",
+    "static/js/2.38f449f7.chunk.js.map": "/FIT-2/static/js/2.38f449f7.chunk.js.map",
     "index.html": "/FIT-2/index.html",
-    "precache-manifest.11cfd2ddd6f6d62e57143f29410d48c9.js": "/FIT-2/precache-manifest.11cfd2ddd6f6d62e57143f29410d48c9.js",
+    "precache-manifest.d03cc2406d631394cf9d587b669136bf.js": "/FIT-2/precache-manifest.d03cc2406d631394cf9d587b669136bf.js",
     "service-worker.js": "/FIT-2/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/FIT-2/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.3a1953c6.chunk.css.map": "/FIT-2/static/css/main.3a1953c6.chunk.css.map",
-    "static/js/2.6bec792e.chunk.js.LICENSE.txt": "/FIT-2/static/js/2.6bec792e.chunk.js.LICENSE.txt",
-    "static/media/image.png": "/FIT-2/static/media/image.d7265326.png"
+    "static/css/2.a98241bf.chunk.css.map": "/FIT-2/static/css/2.a98241bf.chunk.css.map",
+    "static/css/main.003f71b6.chunk.css.map": "/FIT-2/static/css/main.003f71b6.chunk.css.map",
+    "static/js/2.38f449f7.chunk.js.LICENSE.txt": "/FIT-2/static/js/2.38f449f7.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/FIT-2/static/media/roboto-latin-900-normal.bb1e4dc6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.0440aedc.js",
-    "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.6bec792e.chunk.js",
-    "static/css/main.3a1953c6.chunk.css",
-    "static/js/main.a235ae09.chunk.js"
+    "static/css/2.a98241bf.chunk.css",
+    "static/js/2.38f449f7.chunk.js",
+    "static/css/main.003f71b6.chunk.css",
+    "static/js/main.e50e6544.chunk.js"
   ]
 }
