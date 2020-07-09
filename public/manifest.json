@@ -5,10 +5,10 @@
     {
       "src": "virus.png",
       "type": "image/png",
-      "sizes": "128x128"
+      "sizes": "256x256"
     }
   ],
-  "start_url": "",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
