@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(23, 20, 38);
+    background-color: rgb(0, 0, 0);
 }
 
 .container {
@@ -7,6 +7,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+a {
+    margin-bottom: 3vh;
 }
 
 h1 {
@@ -24,7 +28,7 @@ h1 {
     h1 {
         font-size: 2em;
         margin-top: 10px;
-        margin-bottom: 5vh;
+        margin-bottom: 2vh;
     }
 }
 

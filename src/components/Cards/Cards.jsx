@@ -16,7 +16,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
         <div class={styles.container}>
             <Grid container spacing={3} justify='center'>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
-                <CardContent >
+                <CardContent>
                         {/* Basically the <p> tag for material UI, gutterbottom provides a bottom margin */}
                         <Typography>Infected</Typography>
                         <Typography variant="h5">
@@ -31,8 +31,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.active)}>
-                <CardContent >
-                        {/* Basically the <p> tag for material UI, gutterbottom provides a bottom margin */}
+                <CardContent>
                         <Typography>Active</Typography>
                         <Typography variant="h5">
                             <CountUp
