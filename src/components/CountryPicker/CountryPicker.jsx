@@ -13,11 +13,9 @@ const CountryPicker = ({handleCountryChange}) => {
         const fetchAPI = async() => {
             setFetchedCountries(await fetchCountries());
         }
-
         fetchAPI();
     }, [setFetchedCountries]);
     
-    // console.log(fetchedCountries)
     return(
         <FormControl variant="filled" className={styles.formControl}>
             <NativeSelect className={styles.nativeSelect} variant="filled" IconComponent={() => (<ExpandMoreIcon color="white"/>)} style={{color: "rgb(107, 117, 126)", borderBottom:"1px solid rgb(107, 117, 126)"}} default="" onChange={(e) => {handleCountryChange(e.target.value)}}>

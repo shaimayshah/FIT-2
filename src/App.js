@@ -36,7 +36,7 @@ class App extends React.Component {
         // Class name is this to ensure that there is no interference with other styles
         <div className={styles.container}>
             <h1 className = {styles.heading}>COVID-19 Tracker</h1>
-            <a href="./game/index.html">Play the Coronavirus hangman game here.</a>
+            <a href="https://shaimayshah.github.io/FIT-2-Hangman/">Play the Coronavirus hangman game here.</a>
             <CountryPicker handleCountryChange={this.handleCountryChange}/>
             <Chart data={this.state.data} country={this.state.country}/>
             <Cards data = {this.state.data}/>

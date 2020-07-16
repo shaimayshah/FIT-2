@@ -22,7 +22,7 @@ const Chart = ({data:{confirmed, recovered, deaths}, country}) => {
             options = {{
                 legend: {display: false},
                 responsive: true,
-                title: {display: true, text:`${country} Current State`},
+                title: {display: true, text:`${country} COVID-19 Numbers`},
                 maintainAspectRatio: false,
                 scales: {
                     xAxes: [{

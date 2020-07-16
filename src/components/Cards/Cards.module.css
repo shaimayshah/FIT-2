@@ -20,6 +20,11 @@
     color: rgb(255, 7, 58) !important;
 }
 
+.infected:hover {
+    color: white;
+    background-color: rgb(255, 7, 58)
+}
+
 .active {
     border-top: 10px solid rgb(45, 176, 246);
     color: rgb(45, 176, 246) !important;
